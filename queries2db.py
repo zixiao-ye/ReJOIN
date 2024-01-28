@@ -1,5 +1,5 @@
 from src.database import Database
-import moz_sql_parser
+import mo_sql_parsing
 import json
 import os
 
@@ -43,7 +43,7 @@ cursor = db.conn.cursor()
 for file_name in files:
     file = open(dataset + "/" + file_name, "r")
     query = file.read()
-    ast = moz_sql_parser.parse(query)
+    ast = mo_sql_parsing.parse(query)
     relations_num = len(ast["from"])
     planning, execution = db.get_query_time(query)
     cost = db.optimizer_cost(query)

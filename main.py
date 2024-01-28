@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import division
 
-from tensorforce import TensorForceError
+# from tensorforce import TensorForceError
 from tensorforce.agents import Agent
 from tensorforce.execution import Runner
 from src.environment import ReJoin
@@ -130,13 +130,13 @@ def main():
         with open(args.agent_config, "r") as fp:
             agent_config = json.load(fp=fp)
     else:
-        raise TensorForceError("No agent configuration provided.")
+        raise Exception("No agent configuration provided.")
 
     if args.network_spec is not None:
         with open(args.network_spec, "r") as fp:
             network_spec = json.load(fp=fp)
     else:
-        raise TensorForceError("No network configuration provided.")
+        raise Exception("No network configuration provided.")
 
     # Set up the PPO Agent
     agent = Agent.from_spec(

@@ -1,6 +1,6 @@
-[submodule "join-order-benchmark"]
-	path = join-order-benchmark
-	url = https://github.com/zixiao-ye/join-order-benchmark
 [submodule "tensorforce"]
 	path = tensorforce
 	url = https://github.com/tensorforce/tensorforce
+[submodule "join-order-benchmark"]
+	path = join-order-benchmark
+	url = https://github.com/zixiao-ye/join-order-benchmark
